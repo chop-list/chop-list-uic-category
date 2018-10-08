@@ -1,5 +1,5 @@
-import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
-import 'chop-list-uic-item/chop-list-uic-item.js';
+import { html, PolymerElement } from '@polymer/polymer/polymer-element';
+import 'chop-list-uic-item/chop-list-uic-item';
 
 /**
  * `chop-list-uic-category`
@@ -20,17 +20,19 @@ class ChopListUicCategory extends PolymerElement {
           display: block;
           background-color: palegreen;
           font-variant-caps: titling-caps;
-          
+          padding: 5px;
+        }
+        .bullet {
+            vertical-align: center;
         }
         .heading .title {
             display: inline-block;
+            font-family: "Helvetica Neue";
+            font-size: 1.5em;
+            color: gray;
+            margin-left: 0.2em;
         }
-        /*.item_list {*/
-            /*height: auto;*/
-        /*}*/
         [opened] .bullet {
-          -ms-transform: rotate(90deg); /* IE 9 */
-          -webkit-transform: rotate(90deg); /* Safari */
             transform: rotate(90deg);
         }
         div.category:not([opened]) .list {
@@ -42,8 +44,8 @@ class ChopListUicCategory extends PolymerElement {
       </style>
       <div class="category" opened$={{opened}}>
         <div class="heading" on-click="toggleStatus">
-          <svg class="bullet" height="10" width="10">
-            <polygon points="0,0 0,10 10,5" style="fill:gray;stroke-width:0" />
+          <svg class="bullet" height="15" width="15">
+            <polygon points="0,0 0,15 15,7.5" style="fill:gray;stroke-width:0" />
             Sorry, your browser does not support inline SVG.
           </svg>
           <div class="title">Category</div>
@@ -56,6 +58,7 @@ class ChopListUicCategory extends PolymerElement {
       </div>
     `;
   }
+
   static get properties() {
     return {
       opened: {
@@ -64,10 +67,7 @@ class ChopListUicCategory extends PolymerElement {
       },
     };
   }
-  // ready() {
-  //   super.ready();
-  //   this.addEventListener('click', this.toogleStatus);
-  // }
+
 
   toggleStatus() {
     this.opened = !this.opened;
