@@ -2,8 +2,12 @@
   "name": "chop-list-uic-category",
   "description": "Chop list category that contains a header and items",
   "main": "chop-list-uic-category.js",
+  "scripts": {
+    "serve": "polymer serve"
+  },
   "dependencies": {
-    "@polymer/polymer": "^3.0.0"
+    "@polymer/polymer": "^3.0.0",
+    "chop-list-uic-item": "^1.0.0"
   },
   "devDependencies": {
     "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
