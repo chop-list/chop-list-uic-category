@@ -2,6 +2,7 @@
   "name": "chop-list-uic-category",
   "description": "Chop list category that contains a header and items",
   "main": "chop-list-uic-category.js",
+  "version": "1.0.0",
   "scripts": {
     "serve": "polymer serve"
   },
